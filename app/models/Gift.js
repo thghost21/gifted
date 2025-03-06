@@ -4,5 +4,10 @@ export class Gift {
     this.creatorId = data.creatorId
   }
 
+  get giftLayout() {
+    return `
+      <img src="${this.url}"alt="gift">
+    `
 
+  }
 }
