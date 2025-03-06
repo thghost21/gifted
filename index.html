@@ -28,16 +28,18 @@
     <section>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-4">
-            <h1>Create</h1>
-            <form onsubmit="app.giftsController.sendGift()">
-              <input type="text" placeholder="tag" name="tag">
-              <input type="url" placeholder="url" name="url">
-              <button class="btn btn-success" title="submit">Submit</button>
-              <hr>
-            </form>
+          <div class="col-4 p-3 bg-dark">
+            <div class="bg-primary m-3 p-3 d-flex">
+              <h1>Create</h1>
+              <form onsubmit="app.giftsController.sendGift()">
+                <input type="text" placeholder="tag" name="tag">
+                <input type="url" placeholder="url" name="url" required>
+                <button class="btn btn-success" title="submit">Submit</button>
+                <hr>
+              </form>
+            </div>
           </div>
-          <div class="col-8">
+          <div class="col-8 bg-dark">
             <div id="giftList" class="row">
 
 
