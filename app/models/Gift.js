@@ -8,7 +8,8 @@ export class Gift {
 
   get giftLayout() {
     return `
-      <img type="button" onclick="app.giftsController.openGift('${this.id}')" src="${this.url}"alt="gift">
+    <div class="col-2">
+      <img  type="button" onclick="app.giftsController.openGift('${this.id}')" src="${this.url}"alt="gift"></div>
     `
 
   }

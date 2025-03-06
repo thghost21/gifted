@@ -26,21 +26,29 @@
   <main>
 
     <section>
-      <div class="container">
-        <div class="row justify-content-center">
+      <div class="container-fluid">
+        <div class="row">
           <div class="col-4">
             <h1>Create</h1>
-            <form>
+            <form onsubmit="app.giftsController.sendGift()">
 
               <input type="text" placeholder="url">
+              <button class="btn btn-success" type="button" title="submit">Submit</button>
+              <hr>
             </form>
           </div>
-          <div class="col-6 ">
-            <div id="giftList" class="text-center">
-              <h1>Gift</h1>
-              <img
-                src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D"
-                alt="gift">
+          <div class="col-8">
+            <div class="row">
+              <div id="giftList">
+                <h1>Gift</h1>
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="gift">
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>

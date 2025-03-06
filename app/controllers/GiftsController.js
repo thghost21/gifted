@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { giftService } from "../services/GiftsService.js";
+import { getFormData } from "../utils/FormHandler.js";
 import { Pop } from "../utils/Pop.js";
 
 export class GiftsController {
@@ -34,5 +35,18 @@ export class GiftsController {
     gifts.forEach(gift => content += gift.giftLayout);
     const giftElem = document.getElementById('giftList')
     giftElem.innerHTML = content
+  }
+  async sendGift() {
+    try {
+      console.log(`gifts man`);
+      event.preventDefault()
+
+      const formData = event.target
+      const rawGiftData = getFormData(formData)
+      await giftService.creatGifts(rawGiftData)
+
+    } catch (error) {
+      Pop.error('could not open gift', error)
+    }
   }
 } 
