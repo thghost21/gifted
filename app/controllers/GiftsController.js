@@ -7,6 +7,7 @@ export class GiftsController {
     AppState.on('identity', this.getGifts)
     AppState.on('gifts', this.drawGiftsList)
 
+
   }
 
   async getGifts() {
@@ -16,6 +17,14 @@ export class GiftsController {
 
     } catch (error) {
       Pop.error('could not get gifts', error)
+    }
+  }
+  async openGift(id) {
+    try {
+      giftService.openGift(id)
+
+    } catch (error) {
+      Pop.error('could not open gift', error)
     }
   }
 
